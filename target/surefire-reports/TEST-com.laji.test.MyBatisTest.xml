@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuite tests="8" failures="0" name="com.laji.test.MyBatisTest" time="1.272" errors="8" skipped="0">
+  <properties>
+    <property name="idea.version" value="2021.1"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="java.vm.version" value="16.0.2+7-67"/>
+    <property name="sun.boot.library.path" value="D:\JDK-16\bin"/>
+    <property name="maven.multiModuleProjectDirectory" value="F:\Mybatisjinjie\MybatisDemo"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=";"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="user.script" value=""/>
+    <property name="user.country" value="CN"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="F:\Mybatisjinjie\MybatisDemo"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="16.0.2+7-67"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="C:\Users\ADMINI~1\AppData\Local\Temp\"/>
+    <property name="line.separator" value="
+"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="user.variant" value=""/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="maven.ext.class.path" value="E:\java\IDEA\idea\IntelliJ IDEA 2021.1\plugins\maven\lib\maven-event-listener.jar"/>
+    <property name="classworlds.conf" value="F:\apache-maven-3.6.3\bin\m2.conf"/>
+    <property name="sun.jnu.encoding" value="GBK"/>
+    <property name="java.library.path" value="D:\JDK-16\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;D:\JDK-16\bin;F:\apache-maven-3.6.3\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;D:\CAE2016;D:\xuniji\bin\;E:\paytion\Scripts\;E:\paytion\;C:\SIMULIA\Commands;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Common Files\Intel\Shared Libraries\redist\intel64\compiler;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Users\Administrator\AppData\Local\Programs\Python\Python38;C:\Users\Administrator\AppData\Local\Programs\Python\Python38\Scripts;E:\Git\Git\cmd;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;E:\pycharm\anzhuang\PyCharm 2021.1.1\bin;;&quot;.;D:\JDK-16\bin;D:\JDK-16\jre\bin&quot;;;E:\java\IDEA\idea\IntelliJ IDEA 2021.1\bin;;."/>
+    <property name="maven.conf" value="F:\apache-maven-3.6.3/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="60.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="maven.repo.local" value="F:\apache-maven-3.6.3\my_repository"/>
+    <property name="os.version" value="10.0"/>
+    <property name="user.home" value="C:\Users\Administrator"/>
+    <property name="user.timezone" value="Asia/Shanghai"/>
+    <property name="file.encoding" value="GBK"/>
+    <property name="archettypeCatalog" value="internal"/>
+    <property name="java.specification.version" value="16"/>
+    <property name="user.name" value="Administrator"/>
+    <property name="java.class.path" value="F:\apache-maven-3.6.3\boot\plexus-classworlds-2.6.0.jar;F:\apache-maven-3.6.3\boot\plexus-classworlds.license"/>
+    <property name="java.vm.specification.version" value="16"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.1 -s F:\apache-maven-3.6.3\conf\settings.xml -Dmaven.repo.local=F:\apache-maven-3.6.3\my_repository package"/>
+    <property name="java.home" value="D:\JDK-16"/>
+    <property name="user.language" value="zh"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="16.0.2"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="maven.home" value="F:\apache-maven-3.6.3"/>
+    <property name="file.separator" value="\"/>
+    <property name="java.version.date" value="2021-07-20"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+  </properties>
+  <testcase classname="com.laji.test.MyBatisTest" name="testSelectByCondition" time="0.544">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.testSelectByCondition(MyBatisTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:25.549&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.l.LogFactory&amp;#27;[0;39m - Logging initialized using &apos;class org.apache.ibatis.logging.slf4j.Slf4jImpl&apos; adapter. 
+[DEBUG] &amp;#27;[34m16:27:25.557&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.io.VFS&amp;#27;[0;39m - Class not found: org.jboss.vfs.VFS 
+[DEBUG] &amp;#27;[34m16:27:25.557&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.JBoss6VFS&amp;#27;[0;39m - JBoss 6 VFS API is not available in this environment. 
+[DEBUG] &amp;#27;[34m16:27:25.558&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.io.VFS&amp;#27;[0;39m - Class not found: org.jboss.vfs.VirtualFile 
+[DEBUG] &amp;#27;[34m16:27:25.559&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.io.VFS&amp;#27;[0;39m - VFS implementation org.apache.ibatis.io.JBoss6VFS is not valid in this environment. 
+[DEBUG] &amp;#27;[34m16:27:25.562&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.io.VFS&amp;#27;[0;39m - Using VFS adapter org.apache.ibatis.io.DefaultVFS 
+[DEBUG] &amp;#27;[34m16:27:25.564&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.564&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.614&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.616&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.616&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.616&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.618&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:25.620&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:25.676&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.677&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.677&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.677&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.680&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.681&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.683&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.684&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.685&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.685&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.685&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.686&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:25.687&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.688&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.690&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:25.694&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="deleteByIds" time="0.081">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.deleteByIds(MyBatisTest.java:306)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:25.807&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.808&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.809&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.809&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.809&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.809&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.812&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:25.813&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:25.816&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.817&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.817&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.817&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.818&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.819&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.820&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.821&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.823&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.825&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.827&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.829&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:25.830&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.831&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.834&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:25.842&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="testSelectAll" time="0.075">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.testSelectAll(MyBatisTest.java:31)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:25.890&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.890&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.891&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.892&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.893&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.894&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.895&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:25.896&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:25.903&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.903&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.903&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.904&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.906&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.908&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.914&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.914&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.915&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.915&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.916&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.917&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:25.918&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.920&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.923&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:25.924&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="update" time="0.148">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.update(MyBatisTest.java:236)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:25.974&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.976&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.977&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.978&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:25.979&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.980&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:25.982&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:25.983&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:25.989&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.991&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.991&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.992&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:25.994&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.995&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.996&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:25.996&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:25.997&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:25.999&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.005&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.006&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:26.009&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.010&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.022&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:26.027&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:26.067&amp;#27;[0;39m &amp;#27;[36m[Finalizer]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.067&amp;#27;[0;39m &amp;#27;[36m[Finalizer]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="selectByConditionSingle" time="0.238">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.selectByConditionSingle(MyBatisTest.java:151)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:26.142&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.142&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.143&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.144&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.144&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.145&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.146&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:26.146&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:26.149&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.150&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.150&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.150&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.152&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.152&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.154&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.154&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.155&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.155&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.156&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.157&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:26.158&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.159&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.162&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:26.163&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="add" time="0.048">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.add(MyBatisTest.java:190)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:26.354&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.356&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.357&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.357&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.357&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.357&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.358&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:26.362&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:26.366&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.367&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.367&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.367&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.368&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.368&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.370&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.370&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.371&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.371&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.371&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.372&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:26.373&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.373&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.374&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:26.375&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="deleteById" time="0.086">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.deleteById(MyBatisTest.java:271)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:26.442&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.443&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.444&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.445&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.446&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.447&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.448&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:26.449&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:26.452&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.452&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.452&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.452&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.454&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.454&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.455&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.456&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.456&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.456&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.456&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.457&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:26.458&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.459&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.460&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:26.461&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+  <testcase classname="com.laji.test.MyBatisTest" name="testSelectById" time="0.052">
+    <error message="
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} " type="org.apache.ibatis.exceptions.PersistenceException">org.apache.ibatis.exceptions.PersistenceException: 
+### Error building SqlSession.
+### The error may exist in com/laji/mapper/BrandMapper.xml
+### The error occurred while processing mapper_resultMap[hehe]
+### Cause: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:30)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:80)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:64)
+	at com.laji.test.MyBatisTest.testSelectById(MyBatisTest.java:52)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing SQL Mapper Configuration. Cause: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:122)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parse(XMLConfigBuilder.java:99)
+	at org.apache.ibatis.session.SqlSessionFactoryBuilder.build(SqlSessionFactoryBuilder.java:78)
+	... 31 more
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is &apos;com/laji/mapper/BrandMapper.xml&apos;. Cause: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.loadXmlResource(MapperAnnotationBuilder.java:179)
+	at org.apache.ibatis.builder.annotation.MapperAnnotationBuilder.parse(MapperAnnotationBuilder.java:118)
+	at org.apache.ibatis.binding.MapperRegistry.addMapper(MapperRegistry.java:72)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:106)
+	at org.apache.ibatis.binding.MapperRegistry.addMappers(MapperRegistry.java:118)
+	at org.apache.ibatis.session.Configuration.addMappers(Configuration.java:815)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.mapperElement(XMLConfigBuilder.java:367)
+	at org.apache.ibatis.builder.xml.XMLConfigBuilder.parseConfiguration(XMLConfigBuilder.java:120)
+	... 33 more
+Caused by: org.apache.ibatis.builder.BuilderException: Parsing error was found in mapping #{}.  Check syntax #{property|(expression), var1=value1, var2=value2, ...} 
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:152)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.buildParameterMapping(SqlSourceBuilder.java:92)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.handleToken(SqlSourceBuilder.java:87)
+	at org.apache.ibatis.parsing.GenericTokenParser.parse(GenericTokenParser.java:77)
+	at org.apache.ibatis.builder.SqlSourceBuilder.parse(SqlSourceBuilder.java:50)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:46)
+	at org.apache.ibatis.scripting.defaults.RawSqlSource.&lt;init&gt;(RawSqlSource.java:40)
+	at org.apache.ibatis.scripting.xmltags.XMLScriptBuilder.parseScriptNode(XMLScriptBuilder.java:72)
+	at org.apache.ibatis.scripting.xmltags.XMLLanguageDriver.createSqlSource(XMLLanguageDriver.java:44)
+	at org.apache.ibatis.builder.xml.XMLStatementBuilder.parseStatementNode(XMLStatementBuilder.java:96)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:138)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.buildStatementFromContext(XMLMapperBuilder.java:131)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:121)
+	... 42 more
+Caused by: java.lang.StringIndexOutOfBoundsException: String index out of range: 0
+	at java.base/java.lang.StringLatin1.charAt(StringLatin1.java:48)
+	at java.base/java.lang.String.charAt(String.java:711)
+	at org.apache.ibatis.builder.ParameterExpression.parse(ParameterExpression.java:44)
+	at org.apache.ibatis.builder.ParameterExpression.&lt;init&gt;(ParameterExpression.java:39)
+	at org.apache.ibatis.builder.SqlSourceBuilder$ParameterMappingTokenHandler.parseParameterMapping(SqlSourceBuilder.java:148)
+	... 54 more
+</error>
+    <system-out>[DEBUG] &amp;#27;[34m16:27:26.489&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.489&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.490&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.490&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo 
+[DEBUG] &amp;#27;[34m16:27:26.491&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.491&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/pojo/Brand.class 
+[DEBUG] &amp;#27;[34m16:27:26.494&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;Q 
+[DEBUG] &amp;#27;[34m16:27:26.494&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.pojo.Brand matches criteria [is assignable to Object] 
+[DEBUG] &amp;#27;[34m16:27:26.499&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.499&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.499&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.499&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.d.p.PooledDataSource&amp;#27;[0;39m - PooledDataSource forcefully closed/removed all connections. 
+[DEBUG] &amp;#27;[34m16:27:26.502&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.502&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.513&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.514&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.515&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Listing file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper 
+[DEBUG] &amp;#27;[34m16:27:26.515&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.515&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.class 
+[DEBUG] &amp;#27;[34m16:27:26.516&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: 漱壕&amp;#0;&amp;#0;&amp;#0;3&amp;#0;&amp;#31;&amp;#7;&amp;#0;&amp;#2;&amp;#1;&amp;#0;&amp;#27;com/laji/mapper/BrandMapper&amp;#7;&amp;#0;&amp;#4;&amp;#1;&amp;#0;&amp;#16;java/lang/Object&amp;#1;&amp;#0;	selectAll&amp;#1;&amp;#0;&amp;#18;()Ljava/util/List;&amp;#1;&amp;#0;	Signature&amp;#1;&amp;#0;)()Ljava/util/List&lt;Lcom/laji/pojo/Brand;&gt;;&amp;#1;&amp;#0; 
+[DEBUG] &amp;#27;[34m16:27:26.517&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Find JAR URL: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.517&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Not a JAR: file:/F:/Mybatisjinjie/MybatisDemo/target/classes/com/laji/mapper/BrandMapper.xml 
+[DEBUG] &amp;#27;[34m16:27:26.518&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.DefaultVFS&amp;#27;[0;39m - Reader entry: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; 
+[DEBUG] &amp;#27;[34m16:27:26.518&amp;#27;[0;39m &amp;#27;[36m[main]&amp;#27;[0;39m &amp;#27;[1;32mo.a.i.i.ResolverUtil&amp;#27;[0;39m - Checking to see if class com.laji.mapper.BrandMapper matches criteria [is assignable to Object] 
+</system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--
+        namespace名称空间   注意这个文件路径需要和映射接口相同com/laji/mapper
+-->
+
+<!--
+不管是简单的的sql语句还是多么复杂的sql语句都可通过这个配置文件查询
+对于一些简单明了的sql语句其实是可以在mapper中通过注解形式完成的；复杂的（动态sql）也可以但会比较乱，推荐在xml配置文件中完成配置
+    @Select(select * from tb_brand;)
+    List<Brand> selectAll();
+
+    首字母大写
+        查询 ：@Select
+        添加 ：@Insert
+        修改 ：@Update
+        删除 ：@Delete
+-->
+
+<mapper namespace="com.laji.mapper.BrandMapper">
+
+    <!--中间映射-->
+    <resultMap id="hehe" type="com.laji.pojo.Brand">
+        <!--这个column是表的字段名，property是实体类的属性名，确定它们的对应关系，多表查询也会用到这个
+        可以理解为查询时：brandName参数作为brand_name
+        返回时：brand_name结果作为brandName属性去封装-->
+        <result column="brand_name" property="brandName"/>
+        <result column="company_name" property="companyName"/>
+    </resultMap>
+
+    <!--查询全部-->
+    <select id="selectAll" resultMap="hehe">
+        select *
+        from tb_brand;
+    </select>
+
+
+    <!--通过id查询-->
+    <select id="selectById" resultMap="hehe">
+        <!--
+            *两种形式的占位符
+                    ${}    ${}直接传参数，存在sql注入问题
+                    #{}    #{id}占位符就相当于jdbc里的预编译时sql语句中的？待传参数，测试传参给Brand，Brand在传给此处
+            *参数类型
+                    parameterType="int"可省略，且一般省略
+            *特殊处理字符（在标签内<一般是不能用的应为会识别为标签）
+                    1、实体字符 &lt 小于号  select * from tb_brand where id &lt #{id};
+                    2、CDATA区 区内内容当纯文本处理，select * from tb_brand where id <![CDATA[   <    ]]> #{id}
+         -->
+        select * from tb_brand where id = #{id}
+    </select>
+
+
+    <!--条件查询-->
+    <!--静态sql有缺陷就是查询时必须把所有参数都传入才会查询到结果，否则返回empty set 空集合
+    <select id="selectByCondition" resultMap="hehe">
+        select *
+        from tb_brand
+        where
+            status = #{status}
+          and company_name like #{companyName}
+          and brand_name like #{brandName}
+    </select>
+    -->
+
+
+    <!--
+    动态条件查询
+        无需传入所有参数
+        存在缺点：显然的第一个即status的值必须传，不然select就会存在语法错误，怎么解决呢？
+            1、在where后面加一个恒成立条件where 1=1 <if test="status !=null"> and status = #{status}  ......
+            2、mybatis提供的方法，采用<where>标签代替where（肯定是推荐这种啦，
+            wher这个标签的作用相当于1、智能*去除*语句中的and2、给select语句添加一个where 1=1恒成立条件）
+    -->
+    <select id="selectByCondition" resultMap="hehe">
+        <!--
+            select *
+            from tb_brand
+            where
+            <if test="status !=null">
+                status = #{status}
+            </if>
+            <if test="companyName !=null and companyName !='' ">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName !=null and brandName !='' ">
+                and brand_name like #{brandName}
+            </if>
+        </select>
+        -->
+        select *
+        from tb_brand
+        <where>
+            <if test="status !=null">
+                and status = #{status}
+            </if>
+            <if test="companyName !=null and companyName !='' ">
+                and company_name like #{companyName}
+            </if>
+            <if test="brandName !=null and brandName !='' ">
+                and brand_name like #{brandName}
+            </if>
+        </where>
+    </select>
+
+
+    <!--单条件动态查询相当于java中的switch语句
+    <select id="selectByConditionSingle" resultMap="hehe">
+        select *
+        from tb_brand
+        where
+        <choose>
+            <when test="status !=null">
+                status = #{status}
+            </when>
+            <when test="companyName !=null and companyName !=''">
+                company_name like #{companyName}
+            </when>
+            <when test="brandName !=null and brandName !=''">
+                brand_name like #{brandName}
+            </when>
+
+            <otherwise>
+                1=1
+            </otherwise>
+        </choose>
+    </select>
+    -->
+    <!--结合《where》对前面改善，省去《otherwise》标签-->
+    <select id="selectByConditionSingle" resultMap="hehe">
+        select *
+        from tb_brand
+        <where>
+            <choose>
+                <when test="status !=null">
+                    status = #{status}
+                </when>
+                <when test="companyName !=null and companyName !=''">
+                    company_name like #{companyName}
+                </when>
+                <when test="brandName !=null and brandName !=''">
+                    brand_name like #{brandName}
+                </when>
+            </choose>
+        </where>
+    </select>
+
+
+    <!--添加注册-->
+    <insert id="add">
+        insert into tb_brand (brand_name, company_name, ordered, description, status)
+        values (#{brandName}, #{companyName}, #{ordered}, #{description}, #{status});
+    </insert>
+
+
+    <!--修改全部字段数据，这是静态修改，如果只传入一个参数，则其它为传入的参数会默认修改为null,
+    其实就是如果有占位符，但是不传参数则默认传入null
+    <update id="update">
+        update tb_brand
+        set brand_name   =#{brandName},
+            company_name =#{companyName},
+            ordered      =#{ordered},
+            status       =#{status}
+        where id = #{id}
+    </update>
+    -->
+    <!--动态修改数据，修改数据个数可选，根据传入的参数个数动态修改,可用if标签动态判断，根据传入参数动态判断是否添加占位符-->
+    <update id="update">
+        update tb_brand
+        <!--<set>标签解决逗号问题和修改的参数个数为零时报错问题-->
+        <set>
+            <if test="brandName !=null and brandName !='' "/>
+            brand_name =#{brandName},
+            <if test="companyName !=null and companyName !='' "/>
+            company_name =#{companyName},
+            <if test="ordered !=null"/>
+            ordered =#{ordered},
+            <if test="status !=null"/>
+            status =#{status}
+            where id = #{id}
+        </set>
+    </update>
+
+
+    <!--删除一个,即删除id这一行数据-->
+    <delete id="deleteById">
+        delete
+        from tb_brand
+        where id = #{};
+    </delete>
+
+
+    <!--静态：同时通过多个id删除多行数据
+    这是有缺点的，因为删除的个数已经在sql语句固定死，传入的删除个数也必须是3个
+    -->
+    <delete id="deleteByIds">
+        delete
+        from tb_brand
+        where id in (?, ?, ?)
+    </delete>
+
+    <!--动态：同时通过多个id删除多行数据
+        删除根据传入一个不确定个数的数组，然后用<foreach>遍历传入的数组，遍历一次生成一个#{}占位符
+        open="(" 和 close=")"起到美化sql语句作用，表示在标签前以“（”打开标签末尾以“）”结束，不写这两个属性直接加括号也是可以的
+        -->
+    <delete id="deleteByIds">
+        delete
+        from tb_brand
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">#{}</foreach>
+    </delete>
+</mapper>

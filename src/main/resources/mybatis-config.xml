@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <typeAliases>
+        <!--<typeAlias type="com.laji.pojo.Brand" alias="brand"/>
+        这个只能给指定类别名，但能指定任意别名
+        -->
+        <!--<package name="com.laji.pojo"/>
+        这个是扫描包定义别名，包下的所有类默认定义别名为类名，不区分大小写
+        -->
+        <package name="com.laji.pojo"/>
+    </typeAliases>
+
+
+    <!--下面这个name和value可配置在配置文件中
+
+    <properties resource="jdbc.properties"/>
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}"/>
+                <property name="url" value="${jdbc.url}"/>
+                <property name="username" value="${jdbc.username}"/>
+                <property name="password" value="${jdbc.password}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    -->
+
+
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url"
+                          value="jdbc:mysql://localhost:3306/mybatisjinjie?useSSL=false&amp;useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=UTC"/>
+                <property name="username" value="root"/>
+                <property name="password" value="0811"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!--扫描包，这个扫描可以扫描此包下的BrandMapper中注解，还能扫描BrandMapper.xml配置文件
+    所以我们把BrandMapper和BrandMapper.xml路径建一样-->
+    <mappers>
+        <!--
+        这个和重命名一样可扫描单个文件也可扫描包下所有文件
+        <mapper resource="com/laji/mapper/BrandMapper.xml"/>
+        -->
+        <!--扫描包-->
+        <package name="com/laji/mapper"/>
+    </mappers>
+</configuration>
